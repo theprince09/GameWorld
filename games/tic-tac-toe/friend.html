@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe - Friend vs Friend</title>
+    <link rel="stylesheet" href="css/friend.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="rules">
+            <h2>TIC TAC TOE - Friend vs Friend GAME RULES</h2>
+            <ul>
+                <li>Player 1 is X, Player 2 is O.</li>
+                <li>Players take turns marking a square.</li>
+                <li>The first to get 3 of their marks in a row (up, down, across, or diagonally) wins.</li>
+                <li>If all 9 squares are filled and no player has 3 in a row, the game is a tie.</li>
+            </ul>
+        </div>
+
+        <div class="game">
+            <h1>Playing Friend vs Friend!</h1>
+            <div id="status">Player 1's Turn (X)</div>
+            <div class="board" id="board"></div>
+            <button id="restartBtn">Restart Game</button>
+            <a href="index.html">Back</a>
+        </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='../../index.html#explore'">⬅️Explore</button>
+    <button class="back-btn" onclick="window.location.href='index.html'" style="left: 200px;">⬅️Choose</button>
+
+    <script src="js/friend.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Man Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Games Section Title -->
+  <section id="explore" class="games-section">
+    <h1><strong>Dino Runner!</strong></h1>
+  </section>
+  
+  <!-- Back Button -->
+  <button class="back-btn" onclick="window.location.href='../../index.html#explore'">⬅️Explore</button>
+  
+  <!-- Game Area -->
+  <div id="game">
+    <div id="background"></div>
+    <div id="ground"></div> 
+    <div id="man"></div>
+    <div id="score">0</div>
+    <div id="gameOver" class="hidden">
+      <h1>Game Over</h1>
+      <p id="finalScore"></p>
+      <button onclick="restartGame()">Restart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

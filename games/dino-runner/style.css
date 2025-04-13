@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://img.freepik.com/free-vector/gradient-abstract-wireframe-background_23-2149009903.jpg?semt=ais_hybrid&w=740') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  /* Stack elements vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: flex-start;  /* Align content at the top */
+    padding-top: 30px;  /* Optional padding to move everything a bit down */
+}
+
+.games-section {
+    width: 100%;
+    text-align: center;  /* Ensure text is centered */
+}
+
+.games-section h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;  /* Bigger size */
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);  /* Shadow effect */
+    margin-bottom: 20px;
+    padding: 0 20px;  /* Optional padding for better text alignment */
+}
+
+#game {
+    position: relative;
+    width: 1000px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.4);  /* Transparent black background */
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);  /* Optional: a slight blur effect for a cool glass look */
+}
+
+#background {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);  /* Fully transparent */
+    background-size: cover;
+    animation: scrollBg 5s linear infinite;
+}
+
+@keyframes scrollBg {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+#ground {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    height: 4px;
+    background: white;
+    z-index: 1;
+}
+
+#man {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    width: 50px;
+    height: 80px;
+    background: url('X5Nj.gif') no-repeat center/cover;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 20px;
+    width: 35px;
+    height: 60px;
+    background: url('https://png.pngtree.com/png-vector/20240827/ourmid/pngtree-stunning-cactus-plant-in-full-bloom-png-image_13626444.png') no-repeat center/cover;
+}
+
+.jump {
+    animation: jump 0.6s ease forwards;
+}
+
+@keyframes jump {
+    0% { bottom: 20px; }
+    30% { bottom: 150px; }
+    50% { bottom: 170px; }
+    70% { bottom: 150px; }
+    100% { bottom: 20px; }
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 28px;
+}
+
+#gameOver {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+}
+
+#gameOver button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.back-btn {
+    position: fixed;  /* Make it stay in place */
+    bottom: 20px;  /* 20px from bottom */
+    left: 30px;  /* 30px from left */
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #410707;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1000;  /* Ensure it's above other content */
+    margin-right: 10px;  /* spacing between buttons */
+}
+
+.back-btn:hover {
+    background-color: #cc5252;
+}

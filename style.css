@@ -1,0 +1,273 @@
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent dark */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Navbar links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 150px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #00b894;
+  }
+  
+  /* Navbar buttons */
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Search box */
+  .search-box {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  /* Search button */
+  .search-btn {
+    background: #00b894;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 50px;
+    transition: background 0.3s;
+  }
+  
+  .search-btn:hover {
+    background: #00997a;
+  }
+  
+  /* Landing Section */
+  .landing {
+    background: url('assets/images/new.avif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+  }
+  
+  .landing-content {
+    background: rgba(0,0,0,0.5);
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 350px;
+  
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 2s ease forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .landing-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    min-height: 70px; /* to prevent layout shift while typing */
+  }
+  
+  .landing-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .start-btn {
+    background: #00b894;
+    padding: 15px 30px;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .start-btn:hover {
+    background: #00997a;
+  }
+  /* General page styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+  }
+  
+  /* Header styling */
+  header {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Games section */
+  .games-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    background: url('assets/images/light_blaze_hd_1080p.jpg') no-repeat center center/cover;
+  }
+  
+  .games-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Games list (ul and li) */
+  .games-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .games-list li {
+    background-color: #dbdbdb;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: default;
+    transition: background-color 0.3s;
+  }
+  
+  .games-list li:hover {
+    background-color: #45a049;
+  }
+  
+  .games-section h1 {
+    font-size: 50px; /* Bigger size */
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  }
+  
+
+  /* Games container */
+
+  .games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  /* Individual game card */
+  .game-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.8s ease-out, transform 0.8s ease-out;
+    
+    /* Scroll Animation Start State */
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  /* On Hover */
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  /* When Scroll into View */
+  .game-card.show {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0); /* subtle glow when appear */
+  }
+  
+  /* Heading Style */
+  .game-card h2 {
+    margin-bottom: 15px;
+    color: #f0f0f0;
+    font-family: 'Orbitron', sans-serif; /* futuristic gaming font */
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(24, 24, 24, 0.7);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Heading Hover */
+  .game-card h2:hover {
+    transform: scale(0.8); /* slight zoom on hover */
+  }
+  
+  /* Play Now button */
+  .play-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0e7f72;
+    color: white;
+    border-radius: 25px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .play-button:hover {
+    background-color: #384e4b;
+  }
+  

@@ -1,0 +1,129 @@
+/* General Body Styles */
+body {
+    background: #121212;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+}
+
+/* Rules Section */
+.rules {
+    max-width: 300px;
+}
+
+.rules h2 {
+    margin-bottom: 20px;
+    color: #00c3ff;
+}
+
+.rules ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Game Section */
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Game Heading */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Tic Tac Toe Board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+/* Individual Cell */
+.cell {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Game Status */
+#status {
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Links */
+a {
+    color: #00c3ff;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: #009bd4;
+}
+
+/* Restart Button */
+#restartBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00c3ff;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#restartBtn:hover {
+    background-color: #009bd4;
+}
+
+/* Back Buttons */
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #410707;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 1000;
+    margin-right: 10px;
+}
+
+.back-btn:hover {
+    background-color: #cc5252;
+}
